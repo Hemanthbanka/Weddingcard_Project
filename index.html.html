@@ -1,0 +1,174 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Card</title>
+  <style>
+    .card-container {
+      width: 600px;
+      height: 800px;
+      perspective: 2000px;
+      text-align: center;
+    }
+
+    .card-container:hover .front {
+      transform: rotateY(-180deg);
+    }
+
+    .card-container:hover .back {
+      transform: rotateY(0deg);
+    }
+
+    .front,
+    .back {
+      width: 600px;
+      height: 800px;
+      position: absolute;
+      backface-visibility: hidden;
+      transition: transform 0.6s;
+    }
+
+    .front {
+      background-color: #fff;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .back {
+      background-color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: rotateY(180deg);
+    }
+    .banner-text{
+      margin: 5px 0;
+      color: black;
+      /* margin-top: 850px; */
+    }
+    .container {
+      position: relative;
+      display: flex;
+    }
+
+    .container span {
+      font-size: 50px;
+      color: white;
+      font-weight: bold;
+      opacity: 0;
+      animation: drop 0.4s linear forwards;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: rgb(234, 47, 23);
+    }
+
+    .container span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .container span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .container span:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    .container span:nth-child(5) {
+      animation-delay: 0.8s;
+    }
+
+    .container span:nth-child(6) {
+      animation-delay: 1s;
+    }
+
+    .container span:nth-child(7) {
+      animation-delay: 1.2s;
+    }
+
+    .container span:nth-child(8) {
+      animation-delay: 1.4s;
+    }
+
+    .container span:nth-child(9) {
+      animation-delay: 1.6s;
+    }
+
+    .container span:nth-child(10) {
+      animation-delay: 1.8s;
+    }
+
+    @keyframes drop {
+      0% {
+        transform: translateY(-200px) scaleY(0.9);
+      }
+
+      5% {
+        opacity: 0.7;
+      }
+
+      50% {
+        transform: translateY(0px) scaleY(1);
+        opacity: 1;
+      }
+
+      65% {
+        transform: translateY(-17px) scaleY(0.9);
+      }
+
+      75% {
+        transform: translateY(-22px) scaleY(0.9);
+      }
+
+      100% {
+        transform: translateY(0px) scaleY(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <span>S</span>
+    <span>a</span>
+    <!-- <span>i</span>&nbsp; -->
+    <span>K</span>
+    <span>i</span>
+    <span>r</span>
+    <span>a</span>
+    <span>n</span>&nbsp;
+    <span>w</span>
+    <span>e</span>
+    <span>d</span>
+    <span>s</span>&nbsp;
+    <span>S</span>
+    <span>o</span>
+    <span>w</span>
+    <span>m</span>
+    <span>y</span>
+    <span>a</span>
+  </div>
+  <div class="card-container">
+    <div class="front">
+      <img src="./sha.JPG" style="width: 600px; height: 900px;">  
+      <div class="banner-text">
+        <h2><i>Banka's Wedding Invitation</i></h2>
+        <p>We are delighted to invite you to celebrate our special day with us.</p>
+      </div> 
+    </div>
+    <div class="back">
+      <h2>Wedding Details</h2>
+      <p>Date: [Wedding Date]</p>
+      <p>Time: [Wedding Time]</p>
+      <p>Location: [Wedding Location]</p>
+    </div>
+  </div>
+</body>
+
+</html>
